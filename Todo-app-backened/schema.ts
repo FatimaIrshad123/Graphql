@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose'
-mongoose.connect('mongodb+srv://Fatima:Fatima@cluster0.7bunznc.mongodb.net/Todo-server')
+mongoose.connect('your mongodb url/Todo-server')
 const todoSchema = new mongoose.Schema(
     {title:String, description : String}
 )
