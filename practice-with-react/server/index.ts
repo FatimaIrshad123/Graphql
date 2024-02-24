@@ -25,15 +25,9 @@ const server = new ApolloServer ({
         },
         Mutation : {
             async createuser(_,args){
-                // let data = await Userdb.find({})
                 let newUser = await Userdb.create(args.create)
                         return newUser
-                // let x = data.find(e => e.email === args.create.email)
-                // if (typeof(x) === 'undefined'){
-                //     const token = jwt.sign(args.create,secret)
-                //     const verify = jwt.verify(token,secret)
-                //     if (verify){}else {return 'Invalid User'} }else{return 'User Already exists'}
-            },
+                },
             async updateuser(_,args){
                 let x = await Userdb.find({});
                let y = await Userdb.findByIdAndUpdate(args.id,args.update)
